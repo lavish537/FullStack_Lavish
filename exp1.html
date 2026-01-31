@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobConnect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f3f2ef;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+
+    header h1 {
+      font-size: 26px;
+      color: #0a66c2;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #0a66c2;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+      background: #fff;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 42px;
+      color: #0a66c2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-box input,
+    .search-box button {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .search-box input {
+      flex: 1;
+    }
+
+    .search-box button {
+      background: #0a66c2;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+    }
+
+    .search-box button:hover {
+      background: #004182;
+    }
+
+    .hero img {
+      flex: 1;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    /* Featured Jobs */
+    .jobs {
+      padding: 50px 80px;
+    }
+
+    .jobs h3 {
+      margin-bottom: 30px;
+      font-size: 28px;
+      color: #0a66c2;
+    }
+
+    .job-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .job-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      transition: box-shadow 0.3s;
+    }
+
+    .job-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .job-card h4 {
+      margin-bottom: 10px;
+      color: #0a66c2;
+    }
+
+    .job-card p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .job-card button {
+      background: #0a66c2;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .job-card button:hover {
+      background: #004182;
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <h1>JobConnect</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Companies</a></li>
+        <li><a href="#">Networking</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Your Professional Community</h2>
+      <p>Connect with professionals, discover opportunities, and grow your career.</p>
+      <div class="search-box">
+        <input type="text" placeholder="Search jobs, companies, or people">
+        <button>Search</button>
+      </div>
+    </div>
+    <img src="JOB_PORTAL.png" alt="Networking illustration">
+  </section>
+
+  <!-- Featured Jobs -->
+  <section class="jobs">
+    <h3>Featured Jobs</h3>
+    <div class="job-list">
+      <div class="job-card">
+        <h4>Frontend Developer</h4>
+        <p>Company: InnovateTech</p>
+        <p>Location: Bangalore</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job-card">
+        <h4>Data Scientist</h4>
+        <p>Company: AI Labs</p>
+        <p>Location: Hyderabad</p>
+        <button>Apply Now</button>
+      </div>
+      <div class="job-card">
+        <h4>Product Manager</h4>
+        <p>Company: VisionCorp</p>
+        <p>Location: Gurgaon</p>
+        <button>Apply Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 JobConnect. Inspired by LinkedIn’s design. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
