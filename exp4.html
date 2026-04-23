@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Posting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+            width: 400px;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .job-card {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+        }
+        .job-card h3 {
+            margin: 0;
+            color: #007bff;
+        }
+        .job-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Job Posting Form</h2>
+    <form id="jobForm">
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" required>
+
+        <label for="company">Company Name:</label>
+        <input type="text" id="company" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" required>
+
+        <label for="description">Job Description:</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <button type="submit">Post Job</button>
+    </form>
+
+    <h2>Available Jobs</h2>
+    <div id="jobList"></div>
+
+    <script>
+        document.getElementById("jobForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let title = document.getElementById("title").value;
+            let company = document.getElementById("company").value;
+            let location = document.getElementById("location").value;
+            let description = document.getElementById("description").value;
+
+            let jobCard = document.createElement("div");
+            jobCard.classList.add("job-card");
+
+            jobCard.innerHTML = `
+                <h3>${title}</h3>
+                <p><strong>Company:</strong> ${company}</p>
+                <p><strong>Location:</strong> ${location}</p>
+                <p>${description}</p>
+            `;
+
+            document.getElementById("jobList").appendChild(jobCard);
+
+            document.getElementById("jobForm").reset();
+        });
+    </script>
+
+</body>
+</html>
